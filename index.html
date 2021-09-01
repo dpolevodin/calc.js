@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kelly+Slab&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Калькулятор</title>
     <script src="script.js"></script>
 </head>
@@ -36,7 +36,7 @@
                 <button class="calc__button" onclick="setValue(this.innerHTML)">*</button>
                 <button class="calc__button" onclick="setValue(this.innerHTML)">0</button>
                 <button class="calc__button" onclick="setValue(this.innerHTML)">.</button>
-                <button class="calc__button" onclick="calcMethods()">=</button>
+                <button id ="resultBtn" class="calc__button" onclick="calcMethods()">=</button>
                 <button class="calc__button" onclick="setValue(this.innerHTML)">/</button>
             </div>
         </div>
