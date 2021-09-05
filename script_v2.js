@@ -1,4 +1,5 @@
 const calc = {
+    whiteViewIsActive: false,
     methods: {
         '+': (a, b) => a + b,
         '-': (a, b) => a - b,
@@ -10,10 +11,11 @@ const calc = {
     result: null,
     insertTextContinue: true,
     calcResult: function(n) {
+        console.log(this.currentOperation)
+        console.log(this.currentValue)
+        console.log(this.result)
         if (this.result != null) {
             this.currentOperation = n
-            console.log(this.result)
-            console.log(this.currentOperation)
             this.currentValue = parseFloat(document.getElementById('inputArea').value);
             this.result = this.methods[this.currentOperation](parseFloat(this.result), parseFloat(this.currentValue))
             this.insertTextContinue = false
@@ -45,6 +47,34 @@ const calc = {
         document.getElementById('inputArea').value = null
         this.result = null
         this.secondValue = null
+    },
+    changeTheme: function() {
+        const bgColor = ['background-color: white', 'background-color: black']
+        const calcBody = (document.getElementsByClassName('calc'))
+        const buttons = document.getElementsByClassName('calc__button')
+        const btnStylesBlack = buttons.style
+        const btnStylesWhite = "background-color: white; color: black; box-shadow: 3px 3px 2px black;"
+
+        const btnResetStyleBlack = buttons[0].style
+        const btnResetStyleWhite = "background-color: firebrick; box-shadow: 3px 3px 2px black;"
+
+        if (!this.whiteViewIsActive) {
+            document.body.style = bgColor[0]
+            for (item of buttons) {
+                item.style = btnStylesWhite
+            }
+            buttons[0].style = btnResetStyleWhite
+            calcBody[0].style = "background-color: #211f1f;" 
+            this.whiteViewIsActive = true
+        } else {
+            document.body.style = bgColor[1]
+            for (item of buttons) {
+                item.style = btnStylesBlack
+            }
+            buttons[0].style = btnResetStyleBlack
+            calcBody[0].style = "background-color: gray;" 
+            this.whiteViewIsActive = false
+        }
     }
 }
 

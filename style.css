@@ -2,6 +2,21 @@ body {
     background-color: black;
 }
 
+.theme-btn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin: 10px 0 0 43px;
+    cursor: pointer;
+    border-radius: 15%;
+    font-size: 15px;
+    background-color: #FFF;
+}
+
+.theme-block {
+    position: relative;
+}
+
 .container {
     width: 1170px;
     max-width: 100%;
@@ -16,7 +31,6 @@ body {
     margin: 0 auto; 
     background-color: gray;
     border-radius: 1%;
-    box-shadow: 5px 3px rgb(95, 83, 83);
 }
 
 .calc__input {
@@ -50,6 +64,7 @@ body {
     border-radius: 10%;
     background-color: black;
     box-shadow: 3px 3px 2px rgb(77, 71, 71);
+    cursor: pointer;
 }
 
 .calc__button:nth-child(4n){
