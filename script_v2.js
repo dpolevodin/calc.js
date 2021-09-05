@@ -49,10 +49,10 @@ const calc = {
 }
 
 resultBtn.onclick = function() {
-    console.log(calc.currentValue)
-    console.log(calc.currentOperation)
-    calc.currentValue = parseFloat(document.getElementById('inputArea').value);
-    calc.result = calc.methods[calc.currentOperation](parseFloat(calc.result), parseFloat(calc.currentValue))
+    const currentValue = parseFloat(document.getElementById('inputArea').value);
+    const result = calc.result
     calc.insertTextContinue = false
-    return document.getElementById('inputArea').value = calc.result
+    calc.currentValue = null
+    calc.result = null
+    return document.getElementById('inputArea').value = calc.methods[calc.currentOperation](parseFloat(result), parseFloat(currentValue))
     }
