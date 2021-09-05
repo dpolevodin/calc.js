@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kelly+Slab&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Калькулятор</title>
-    <script src="script.js"></script>
+    <script src="./script_v2.js"></script>
 </head>
 <body>
     <div class="container">
@@ -18,26 +18,26 @@
                 <input type="text" id="inputArea" class="calc__input-area">
             </div>
             <div class="calc__button-area">
-                <button class="calc__button calc__button_color_red" onclick="resetValue()">ON/C</button>
-                <button class="calc__button" onclick="changeValue()">+/-</button>
-                <button class="calc__button">%</button>
-                <button class="calc__button">√</button>
-                <button class="calc__button" onclick="setValue(this.innerHTML)">7</button>
-                <button class="calc__button" onclick="setValue(this.innerHTML)">8</button>
-                <button class="calc__button" onclick="setValue(this.innerHTML)">9</button>
-                <button class="calc__button" onclick="setValue(this.innerHTML)">+</button>
-                <button class="calc__button" onclick="setValue(this.innerHTML)">4</button>
-                <button class="calc__button" onclick="setValue(this.innerHTML)">5</button>
-                <button class="calc__button" onclick="setValue(this.innerHTML)">6</button>
-                <button class="calc__button" onclick="setValue(this.innerHTML)">-</button>
-                <button class="calc__button" onclick="setValue(this.innerHTML)">1</button>
-                <button class="calc__button" onclick="setValue(this.innerHTML)">2</button>
-                <button class="calc__button" onclick="setValue(this.innerHTML)">3</button>
-                <button class="calc__button" onclick="setValue(this.innerHTML)">*</button>
-                <button class="calc__button" onclick="setValue(this.innerHTML)">0</button>
-                <button class="calc__button" onclick="setValue(this.innerHTML)">.</button>
-                <button id ="resultBtn" class="calc__button" onclick="calcMethods()">=</button>
-                <button class="calc__button" onclick="setValue(this.innerHTML)">/</button>
+                <button class="calc__button calc__button_color_red" onclick="calc.resetValue()">ON/C</button>
+                <button class="calc__button" onclick="calc.changeValue()">+/-</button>
+                <button class="calc__button">%</button> <!-- Доделать-->
+                <button class="calc__button" onclick="calcMethods2()">√</button> <!-- Доделать-->
+                <button class="calc__button" onclick="calc.setValue(this.innerHTML)">7</button>
+                <button class="calc__button" onclick="calc.setValue(this.innerHTML)">8</button>
+                <button class="calc__button" onclick="calc.setValue(this.innerHTML)">9</button>
+                <button class="calc__button" onclick="calc.calcResult(this.innerHTML)">+</button> <!-- Доделать-->
+                <button class="calc__button" onclick="calc.setValue(this.innerHTML)">4</button>
+                <button class="calc__button" onclick="calc.setValue(this.innerHTML)">5</button>
+                <button class="calc__button" onclick="calc.setValue(this.innerHTML)">6</button>
+                <button class="calc__button" onclick="calc.calcResult(this.innerHTML)">-</button> <!-- Доделать-->
+                <button class="calc__button" onclick="calc.setValue(this.innerHTML)">1</button>
+                <button class="calc__button" onclick="calc.setValue(this.innerHTML)">2</button>
+                <button class="calc__button" onclick="calc.setValue(this.innerHTML)">3</button>
+                <button class="calc__button" onclick="calc.calcResult(this.innerHTML)">*</button> <!-- Доделать-->
+                <button class="calc__button" onclick="calc.setValue(this.innerHTML)">0</button>
+                <button class="calc__button" onclick="calc.setValue(this.innerHTML)">.</button>
+                <button id ="resultBtn" class="calc__button" onclick="calc.calcResult()">=</button> <!-- Доделать-->
+                <button class="calc__button" onclick="calc.calcResult(this.innerHTML)">/</button> <!-- Доделать-->
             </div>
         </div>
     </div>
