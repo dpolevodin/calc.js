@@ -2,15 +2,16 @@ body {
     background-color: black;
 }
 
-.theme-btn {
+#theme-btn {
     position: absolute;
     width: 30px;
     height: 30px;
     margin: 10px 0 0 43px;
     cursor: pointer;
-    border-radius: 15%;
+    border-radius: 20%;
     font-size: 15px;
-    background-color: #FFF;
+    background-color: black;
+    color: white;
 }
 
 .theme-block {

@@ -50,6 +50,7 @@ const calc = {
     },
     changeTheme: function() {
         const bgColor = ['background-color: white', 'background-color: black']
+        const btnThemeChange = document.getElementById('theme-btn')
         const calcBody = (document.getElementsByClassName('calc'))
         const buttons = document.getElementsByClassName('calc__button')
         const btnStylesBlack = buttons.style
@@ -60,6 +61,7 @@ const calc = {
 
         if (!this.whiteViewIsActive) {
             document.body.style = bgColor[0]
+            btnThemeChange.style = `${bgColor[0]}; color: black`
             for (item of buttons) {
                 item.style = btnStylesWhite
             }
@@ -68,6 +70,7 @@ const calc = {
             this.whiteViewIsActive = true
         } else {
             document.body.style = bgColor[1]
+            btnThemeChange.style = `${bgColor[1]}; color: white`
             for (item of buttons) {
                 item.style = btnStylesBlack
             }
