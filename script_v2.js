@@ -5,24 +5,24 @@ const calc = {
         '*': (a, b) => a * b,
         '/': (a, b) => a / b,
     },
-    currentOperation: undefined,
+    currentOperation: null,
     currentValue: null,
     result: null,
     insertTextContinue: true,
-    curentValueIsNegative: false,
     calcResult: function(n) {
         if (this.result != null) {
             this.currentOperation = n
-            this.currentValue = +document.getElementById('inputArea').value;
-            this.result = this.methods[this.currentOperation](+this.currentValue, +this.result)
+            console.log(this.result)
+            console.log(this.currentOperation)
+            this.currentValue = parseFloat(document.getElementById('inputArea').value);
+            this.result = this.methods[this.currentOperation](parseFloat(this.result), parseFloat(this.currentValue))
             this.insertTextContinue = false
             return document.getElementById('inputArea').value = this.result
         }
         this.currentOperation = n
         this.currentValue = document.getElementById('inputArea').value
-        this.result = this.methods[this.currentOperation](+this.currentValue, +this.result)
-        document.getElementById('inputArea').value = null
-
+        this.result = this.currentValue
+        return document.getElementById('inputArea').value = null
     },
     setValue: function(n) {
         if (this.insertTextContinue) {
@@ -45,6 +45,14 @@ const calc = {
         document.getElementById('inputArea').value = null
         this.result = null
         this.secondValue = null
-    },
-
+    }
 }
+
+resultBtn.onclick = function() {
+    console.log(calc.currentValue)
+    console.log(calc.currentOperation)
+    calc.currentValue = parseFloat(document.getElementById('inputArea').value);
+    calc.result = calc.methods[calc.currentOperation](parseFloat(calc.result), parseFloat(calc.currentValue))
+    calc.insertTextContinue = false
+    return document.getElementById('inputArea').value = calc.result
+    }

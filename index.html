@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kelly+Slab&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Калькулятор</title>
-    <script src="./script_v2.js"></script>
+    
 </head>
 <body>
     <div class="container">
@@ -36,11 +36,12 @@
                 <button class="calc__button" onclick="calc.calcResult(this.innerHTML)">*</button> <!-- Доделать-->
                 <button class="calc__button" onclick="calc.setValue(this.innerHTML)">0</button>
                 <button class="calc__button" onclick="calc.setValue(this.innerHTML)">.</button>
-                <button id ="resultBtn" class="calc__button" onclick="calc.calcResult()">=</button> <!-- Доделать-->
+                <button id="resultBtn" class="calc__button">=</button> <!-- Доделать-->
                 <button class="calc__button" onclick="calc.calcResult(this.innerHTML)">/</button> <!-- Доделать-->
+                
             </div>
         </div>
     </div>
-    
+    <script src="./script_v2.js"></script>
 </body>
 </html>
