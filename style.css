@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    margin: 0 auto;
 }
 
 #theme-btn {
@@ -28,6 +29,7 @@ body {
 .calc {
     width: 480px;
     max-width: 100%;
+    min-width: 320px;
     height: 780px;
     margin: 0 auto; 
     background-color: gray;
@@ -42,6 +44,7 @@ body {
     display: block;
     direction: rtl;
     width: 80%;
+    min-width: 240px;
     height: 100px;
     margin: 0 auto;
     font-family: 'DotGothic16', sans-serif;
@@ -51,15 +54,19 @@ body {
 }
 
 .calc__button-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
     padding: 50px;
 }
 
 .calc__button {
-    display: inline-block;
     width: 80px;
     height: 80px;
-    margin-right: 16px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     font-size: 24px;
     color: #FFF;
     border-radius: 10%;
@@ -67,12 +74,6 @@ body {
     box-shadow: 3px 3px 2px rgb(77, 71, 71);
     cursor: pointer;
 }
-
-.calc__button:nth-child(4n){
-    margin-right: 0;
-}
-
-
 
 .calc__button_color_red {
     background-color: firebrick;
