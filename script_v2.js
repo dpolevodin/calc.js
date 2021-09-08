@@ -25,6 +25,11 @@ const calc = {
         this.result = this.currentValue
         return document.getElementById('inputArea').value = null
     },
+    percentCalc: function() {
+        const inputPercentValue = parseFloat(document.getElementById('inputArea').value)
+        const result = this.methods[this.currentOperation](parseFloat(this.currentValue), parseFloat(this.currentValue * (inputPercentValue * 0.01)))
+        return document.getElementById('inputArea').value = result
+    },
     setValue: function(n) {
         if (this.insertTextContinue) {
             return document.getElementById('inputArea').value += n;
