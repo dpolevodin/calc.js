@@ -30,6 +30,9 @@ const calc = {
         const result = this.methods[this.currentOperation](parseFloat(this.currentValue), parseFloat(this.currentValue * (inputPercentValue * 0.01)))
         return document.getElementById('inputArea').value = result
     },
+    squareRootCalc: function() {
+        return document.getElementById('inputArea').value = parseFloat(document.getElementById('inputArea').value) ** 0.5
+    },
     setValue: function(n) {
         if (this.insertTextContinue) {
             return document.getElementById('inputArea').value += n;
