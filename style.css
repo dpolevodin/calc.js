@@ -48,7 +48,7 @@ body {
     position: relative;
     display: block;
     direction: rtl;
-    width: 80%;
+    width: 95%;
     min-width: 240px;
     height: 100px;
     margin: 0 auto;
@@ -100,7 +100,7 @@ body {
 
     .calc {
         width: 350px;
-        height: 520px;
+        height: 540px;
         margin: 0 auto;
     }
 
