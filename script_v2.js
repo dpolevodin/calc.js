@@ -41,6 +41,14 @@ const calc = {
         this.insertTextContinue = true
         return document.getElementById('inputArea').value += n;
     },
+    finalResultCalc: function() {
+        const currentValue = parseFloat(document.getElementById('inputArea').value);
+        const result = calc.result
+        calc.insertTextContinue = false
+        calc.currentValue = null
+        calc.result = null
+        return document.getElementById('inputArea').value = calc.methods[calc.currentOperation](parseFloat(result), parseFloat(currentValue))
+    },
     changeValue: function(n) {
         const currentValue = +document.getElementById('inputArea').value;
         if (currentValue > 0) {
@@ -87,12 +95,3 @@ const calc = {
         }
     }
 }
-
-resultBtn.onclick = function() {
-    const currentValue = parseFloat(document.getElementById('inputArea').value);
-    const result = calc.result
-    calc.insertTextContinue = false
-    calc.currentValue = null
-    calc.result = null
-    return document.getElementById('inputArea').value = calc.methods[calc.currentOperation](parseFloat(result), parseFloat(currentValue))
-    }
