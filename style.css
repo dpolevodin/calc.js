@@ -111,8 +111,8 @@ body {
 
     .calc__input-glass {
         position: relative;
-        width: 280px;
-        height: 100px;
+        width: 320px;
+        height: 70px;
         margin-top: -102px;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.55) 60%);
         pointer-events: none;
