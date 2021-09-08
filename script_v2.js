@@ -18,7 +18,7 @@ const calc = {
             this.result = lastResult
             this.currentValue = document.getElementById('inputArea').value
             this.insertTextContinue = false
-            return document.getElementById('inputArea').value = lastResult
+            return document.getElementById('inputArea').value = +lastResult.toFixed(5)
         }
         this.currentOperation = n
         this.currentValue = document.getElementById('inputArea').value
@@ -28,10 +28,10 @@ const calc = {
     percentCalc: function() {
         const inputPercentValue = parseFloat(document.getElementById('inputArea').value)
         const result = this.methods[this.currentOperation](parseFloat(this.currentValue), parseFloat(this.currentValue * (inputPercentValue * 0.01)))
-        return document.getElementById('inputArea').value = result
+        return document.getElementById('inputArea').value = +result.toFixed(5)
     },
     squareRootCalc: function() {
-        return document.getElementById('inputArea').value = parseFloat(document.getElementById('inputArea').value) ** 0.5
+        return document.getElementById('inputArea').value = +(parseFloat(document.getElementById('inputArea').value) ** 0.5).toFixed(5)
     },
     setValue: function(n) {
         if (this.insertTextContinue) {
@@ -47,7 +47,7 @@ const calc = {
         calc.insertTextContinue = false
         calc.currentValue = null
         calc.result = null
-        return document.getElementById('inputArea').value = calc.methods[calc.currentOperation](parseFloat(result), parseFloat(currentValue))
+        return document.getElementById('inputArea').value = +(calc.methods[calc.currentOperation](parseFloat(result), parseFloat(currentValue))).toFixed(5)
     },
     changeValue: function(n) {
         const currentValue = +document.getElementById('inputArea').value;
