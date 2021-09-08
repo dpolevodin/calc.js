@@ -120,6 +120,10 @@ body {
         font-size: 18px;
     }
 
+    .calc__button_color_red {
+        font-size: 12px;
+    }
+
     #theme-btn {
         position: absolute;
         width: 30px;
