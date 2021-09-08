@@ -11,15 +11,14 @@ const calc = {
     result: null,
     insertTextContinue: true,
     calcResult: function(n) {
-        console.log(this.currentOperation)
-        console.log(this.currentValue)
-        console.log(this.result)
         if (this.result != null) {
+            this.currentValue = document.getElementById('inputArea').value
+            const lastResult = this.methods[this.currentOperation](parseFloat(this.result), parseFloat(this.currentValue)) 
             this.currentOperation = n
-            this.currentValue = parseFloat(document.getElementById('inputArea').value);
-            this.result = this.methods[this.currentOperation](parseFloat(this.result), parseFloat(this.currentValue))
+            this.result = lastResult
+            this.currentValue = document.getElementById('inputArea').value
             this.insertTextContinue = false
-            return document.getElementById('inputArea').value = this.result
+            return document.getElementById('inputArea').value = lastResult
         }
         this.currentOperation = n
         this.currentValue = document.getElementById('inputArea').value
