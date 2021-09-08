@@ -100,7 +100,7 @@ body {
 
     .calc {
         width: 350px;
-        height: 600px;
+        height: 560px;
         margin: 0 auto;
     }
 
@@ -114,9 +114,9 @@ body {
     }
 
     .calc__button {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 25px;
+        width: 55px;
+        height: 55px;
+        margin-bottom: 20px;
         font-size: 18px;
     }
 
@@ -129,6 +129,6 @@ body {
         width: 30px;
         height: 30px;
         margin: 10px 0 0 30px;
-        font-size: 15px;
+        font-size: 0;
 }
 }
