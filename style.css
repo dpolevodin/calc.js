@@ -22,14 +22,14 @@ body {
 .container {
     width: 1170px;
     max-width: 100%;
+    min-width: 320px;
     margin: 0 auto; 
-    padding: 50px 0;
+    padding: 50px 0 0 0;
 
 }
 .calc {
     width: 480px;
     max-width: 100%;
-    min-width: 320px;
     height: 780px;
     margin: 0 auto; 
     background-color: gray;
@@ -91,4 +91,38 @@ body {
 
 .calc__button_color_red {
     background-color: firebrick;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .container {
+        padding-top: 10px;
+    }
+
+    .calc {
+        width: 350px;
+        height: 640px;
+        margin: 0 auto;
+    }
+
+    .calc__input-area {
+        font-size: 42px;
+        height: 70px;
+    }
+
+    .calc__button-area {
+        padding: 55px 30px 30px 30px;
+    }
+
+    .calc__button {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+
+    #theme-btn {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        margin: 10px 0 0 30px;
 }
