@@ -37,10 +37,15 @@ body {
 }
 
 .calc__input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 50px;
+
 }
 
 .calc__input-area {
+    position: relative;
     display: block;
     direction: rtl;
     width: 80%;
@@ -51,6 +56,15 @@ body {
     font-size: 50px;
     background: linear-gradient(to bottom, #fefcea, #f5eb9d);
     box-shadow: inset 6px 6px rgb(197, 186, 122);
+}
+
+.calc__input-glass {
+    position: relative;
+    width: 81%;
+    height: 100px;
+    margin-top: -102px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.55) 60%);
+    pointer-events: none;
 }
 
 .calc__button-area {
